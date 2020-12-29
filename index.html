@@ -14,10 +14,11 @@
   <link rel="shortcut icon" href="./images/battle-quest-icon.ico">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/images.css">
   <link rel="stylesheet" href="./css/grid-layout.css">
   <link rel="stylesheet" href="./css/modal-dialogue.css">
   <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/style.css">
   <style type="text/css">
   </style>
 
@@ -25,10 +26,10 @@
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-28080172-12"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments) };
-      gtag('js', new Date());
-      gtag('config', 'UA-28080172-12');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments) };
+    gtag('js', new Date());
+    gtag('config', 'UA-28080172-12');
   </script>
 </head>
 
@@ -41,7 +42,7 @@
           <nav>
             <ul>
               <li>
-                <a class="" href="#">New Game</a>
+                <a class="" href="#" onclick="newGame()">New Game</a>
               </li>
               <li>
                 <a class="" href="#modal-story">Story</a>
@@ -54,9 +55,9 @@
         </div>
 
         <div class="grid-col col-2_6">
-          <form id="cheatForm" class="" action="javascript:" method="post">
+          <form id="cheatForm" class="" action="javascript:">
             <input id="cheat" type="text" placeholder="Cheat Code">
-            <button class="button" onclick="selectContent(this.form)">Enter Cheat Code</button>
+            <button class="button" onclick="enterCheatCode(this.form)">Enter Cheat Code</button>
           </form>
         </div>
       </div>
@@ -66,47 +67,14 @@
     <main>
       <h1 class="game-title">Battle Quest</h1>
 
+      <section id="screenCharacterSelection" class="screen"></section>
 
-      <section id="screen-intro" class="screen">
-
-        <p>
-          You, so curious and so bold, decide to set out on a journey. You wander around the world looking for an
-          adventure.
-          You see many places, step foot on new lands and learn new things.
-        </p>
-        <p>
-          Eventually you come to a place where you meet an old man.
-          It is late and you need rest, so you ask him if you can stay for the night.
-          He lets you in his house, gives you some food, and shows you your bed.
-          For some reason, even though you never have seen him before, the old man seems to recognize you.
-        </p>
-        <p>
-          The next morning the old man tells you that he is a prophet and has foreshadowed your coming...
-        </p>
+      <section id="screenMap" class="screen">
+        <div id="map" class="map-bg"></div>
+        <div id="characterSheet" class="character-screen"></div>
       </section>
 
-
-      <section id="screen-map" class="screen active">
-        <div class="map-bg">
-          <button class="enemy-lvl1"></button>
-          <button class="enemy-lvl2"></button>
-          <button class="enemy-lvl3"></button>
-          <button class="enemy-lvl4"></button>
-          <button class="enemy-lvl5"></button>
-        </div>
-        <div class="character-screen">
-          <h1>Red Mage</h1>
-          <img>
-          <div class="char-stats">
-          </div>
-        </div>
-      </section>
-
-      <section id="screen-battle" class="screen">
-        <div class="battle-bg">
-
-        </div>
-      </section>
+      <section id="screenBattle" class="screen"></section>
 
     </main>
 
@@ -213,6 +181,15 @@
   </div>
 
 
+  <div id="modalMessage" class="modalDialog">
+    <div class="dialogue-window">
+      <a id="modalMessageClose" class="close" onclick="hideModal()">X</a>
+      <div class="dialogue-heading">
+        <h1>Info</h1>
+      </div>
+      <div id="modalMessageContent" class="dialogue-content"></div>
+    </div>
+  </div>
 
 
 

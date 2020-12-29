@@ -31,7 +31,7 @@ nav ul li a:hover {
 
 /* === GENERIC === */
 .button {
-  border: 1px solid DarkRed;
+  border: 2px solid DarkRed;
   color: DarkRed;
   background: transparent;
   font-weight: bold;
@@ -55,44 +55,59 @@ nav ul li a:hover {
   font-size: 50px;
 }
 
+
+.character-screen {
+  width: 25%;
+  height: 100%;
+  background: #333;
+  float: right;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+
+.character-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  max-height: 100%;
+  background: rgba(50, 50, 50, .5);
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+
 .map-bg {
   background: url(../images/worldmap.jpg) no-repeat;
   background-size: 100%;
-  width: 80%;
+  width: 75%;
   height: 100%;
-  display: inline-block;
   float: left;
+  position: relative;
 }
 
-.character-screen {
-  width: 20%;
-  height: 100%;
-  background: #333;
-  display: inline-block;
-  float: right;
+.map-bg > .button-enemy {
+  position: absolute;
+}
+.map-bg > .enemy-lvl1 {
+  bottom: 8%;
+  right: 4%;
+}
+.map-bg > .enemy-lvl2 {
+  bottom: 45%;
+  right: 20%;
+}
+.map-bg > .enemy-lvl3 {
+  top: 30%;
+  left: 45%;
+}
+.map-bg > .enemy-lvl4 {
+  top: 8%;
+  left: 24%;
+}
+.map-bg > .enemy-dragon {
+  top: 37%;
+  left: 10%;
 }
 
-.env-bg {}
-
-.env-bg-lvl1 {
-  background: url(../images/environment/env-swamp.jpg);
-}
-
-.env-bg-lvl2 {
-  background: url(../images/environment/env-rain_forest.jpg)
-}
-
-.env-bg-lvl3 {
-  background: url(../images/environment/env-dark_forest.jpg);
-}
-
-.env-bg-lvl4 {
-  background: url(../images/environment/env-valley_of_death.jpg);
-}
-
-.env-bg-lvl5 {
-  background: url(../images/environment/env-volcano.jpg);
-}
 
 
 

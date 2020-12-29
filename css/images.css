@@ -1,0 +1,147 @@
+/* Actions */
+.action {
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  outline: none;
+}
+
+.action.disabled,
+.action:disabled {
+  filter: grayscale(100%);
+}
+
+.action:hover {
+  border: 2px solid green;
+}
+
+.action-block {
+  background-image: url(../images/actions/action-block.jpg);
+}
+
+.action-magic {
+  background-image: url(../images/actions/action-magic.jpg);
+}
+
+.action-melee {
+  background-image: url(../images/actions/action-melee.jpg);
+}
+
+/* Characters */
+.character-image {
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.char-mage {
+  background-image: url(../images/characters/char-mage.png);
+}
+
+.char-warrior {
+  background-image: url(../images/characters/char-warrior.png);
+}
+
+.char-guardian {
+  background-image: url(../images/characters/char-guardian.png);
+}
+
+/* Enemies */
+.button-enemy {
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: black 0px 0px 6px 2px;
+  animation: enemyOutline 1s infinite alternate;
+  outline: none;
+  /* display: none; */
+}
+
+.button-enemy:hover {
+  animation: none;
+}
+
+.button-enemy:focus {
+  border: 3px solid DarkRed;
+}
+
+/* .button-enemy.show {
+  display: block;
+} */
+
+.enemy-lvl1 {
+  background-image: url(../images/enemies/enemy-lvl1.png);
+}
+
+.enemy-lvl2 {
+  background-image: url(../images/enemies/enemy-lvl2.png);
+  background-position: top;
+}
+
+.enemy-lvl3 {
+  background-image: url(../images/enemies/enemy-lvl3.png);
+}
+
+.enemy-lvl4 {
+  background-image: url(../images/enemies/enemy-lvl4.png);
+  background-position: top;
+}
+
+.enemy-dragon {
+  background-image: url(../images/enemies/enemy-dragon.png);
+}
+
+.enemy-sephiroth {
+  background-image: url(../images/enemies/enemy-sephiroth.png);
+}
+
+/* Environments */
+.battle-bg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.env-bg-enemy-lvl1 {
+  background-image: url(../images/environment/env-swamp.jpg);
+}
+
+.env-bg-enemy-lvl2 {
+  background-image: url(../images/environment/env-rain_forest.jpg)
+}
+
+.env-bg-enemy-lvl3 {
+  background-image: url(../images/environment/env-dark_forest.jpg);
+}
+
+.env-bg-enemy-lvl4 {
+  background-image: url(../images/environment/env-valley_of_death.jpg);
+}
+
+.env-bg-enemy-dragon {
+  background-image: url(../images/environment/env-volcano.jpg);
+}
+
+.env-bg-enemy-sephiroth {
+  background-image: url(../images/environment/env-grave.jpg);
+}
+
+@keyframes enemyOutline {
+  from {
+    box-shadow: black 0px 0px 6px 2px;
+  }
+
+  to {
+    box-shadow: DarkRed 0px 0px 6px 2px;
+  }
+}

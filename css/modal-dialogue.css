@@ -8,10 +8,12 @@
   z-index: 99999;
   opacity: 0;
   pointer-events: none;
+  font-size: 1.1rem;
 }
 
 
-.modalDialog:target {
+.modalDialog:target,
+.modalDialog.show {
   opacity: 1;
   pointer-events: auto;
 }
@@ -28,15 +30,16 @@
 }
 
 
-.close {
+.modalDialog .close {
   text-decoration: none;
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 1.1;
 
   float: right;
   width: 44px;
   text-align: center;
+  cursor: pointer;
 }
 
 .modalDialog form {
