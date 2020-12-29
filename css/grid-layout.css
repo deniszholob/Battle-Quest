@@ -1,0 +1,57 @@
+/* === FLUID GRID LAYOUT === */
+
+.grid-row {
+  clear: both;
+  zoom: 1;
+  padding: 5px 0px;
+}
+
+.grid-row:before,
+.grid-row:after {
+  content: "";
+  display: table;
+}
+
+.grid-row:after {
+  clear: both;
+}
+
+.grid-col {
+  display: block;
+  float: left;
+  margin: 0px 0px 0px .8%;
+  padding: 0px 5px;
+}
+
+.grid-col:first-child {
+  margin-left: 0;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+.col-1_2,
+.col-2_4,
+.col-3_6 {
+  width: 49.6%;
+}
+
+.col-1_3,
+.col-2_6 {
+  width: 32.8%;
+}
+
+.col-2_3,
+.col-4_6 {
+  width: 66.4%;
+}
+
+
+.col-1_4 {
+  width: 24.4%;
+}
+
+.col-3_4 {
+  width: 74.8%;
+}

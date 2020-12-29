@@ -1,0 +1,110 @@
+/* === OVERALL Style === */
+html,
+body {
+  background: black;
+  color: #ddd;
+}
+
+a {
+  color: DarkRed;
+}
+
+a:hover {
+  color: Red;
+}
+
+
+/* === HEADER === */
+header {
+  background: #111;
+}
+
+/* === NAVIGATION === */
+nav ul li a {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+nav ul li a:hover {
+  background: #222;
+}
+
+/* === GENERIC === */
+.button {
+  border: 1px solid DarkRed;
+  color: DarkRed;
+  background: transparent;
+  font-weight: bold;
+}
+
+.button:hover {
+  border-color: Red;
+  color: Red;
+}
+
+
+
+
+/* === MAIN CONTENT === */
+.game-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: OrangeRed;
+  font-size: 50px;
+}
+
+.map-bg {
+  background: url(../images/worldmap.jpg) no-repeat;
+  background-size: 100%;
+  width: 80%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+
+.character-screen {
+  width: 20%;
+  height: 100%;
+  background: #333;
+  display: inline-block;
+  float: right;
+}
+
+.env-bg {}
+
+.env-bg-lvl1 {
+  background: url(../images/environment/env-swamp.jpg);
+}
+
+.env-bg-lvl2 {
+  background: url(../images/environment/env-rain_forest.jpg)
+}
+
+.env-bg-lvl3 {
+  background: url(../images/environment/env-dark_forest.jpg);
+}
+
+.env-bg-lvl4 {
+  background: url(../images/environment/env-valley_of_death.jpg);
+}
+
+.env-bg-lvl5 {
+  background: url(../images/environment/env-volcano.jpg);
+}
+
+
+
+/* === COMPONENT Themes === */
+
+
+/* === Modal Colors and Style=== */
+.modalDialog>.dialogue-window {
+  background: rgba(50, 50, 50, .8);
+  color: #ccc;
+}
+
+.modalDialog>.dialogue-window p {
+  color: DarkOrange;
+}
