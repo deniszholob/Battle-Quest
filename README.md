@@ -10,20 +10,20 @@ Original WinEXE Game
 ## Resources
 
 ### Javascript
-* ![playing-audio-with-javascript](http://stackoverflow.com/questions/9419263/playing-audio-with-javascript)
-* ![HTML Audio](http://www.storiesinflight.com/html5/audio.html)
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
-* ![]()
+* [playing-audio-with-javascript](http://stackoverflow.com/questions/9419263/playing-audio-with-javascript)
+* [HTML Audio](http://www.storiesinflight.com/html5/audio.html)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
 
 
 ## Features
