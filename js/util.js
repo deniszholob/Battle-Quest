@@ -1,3 +1,4 @@
+// Ref: https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089
 export class Util {
     static deepCopy(object) {
         let objectCopy;

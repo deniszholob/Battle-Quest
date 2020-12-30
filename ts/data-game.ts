@@ -20,7 +20,7 @@ export const GAME_DATA: GameData = {
       id: "char-mage",
       name: "Wizard",
       stats: {
-        magic: 40,
+        magic: 4,
         strength: 1,
         defence: 2,
       }
