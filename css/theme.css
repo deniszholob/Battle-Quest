@@ -120,6 +120,7 @@ nav ul li a:hover {
   color: #ccc;
 }
 
+.modalDialog>.dialogue-window li,
 .modalDialog>.dialogue-window p {
   color: DarkOrange;
 }

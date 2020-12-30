@@ -24,11 +24,11 @@ function enterCheatCode(form: HTMLFormElement) {
 
 
 function parseCheatCode(code: string) {
-  if (code === GAME_DATA.cheatShowEnemies) {
+  if (code === GAME_DATA.cheatList.cheatShowEnemies) {
 
-  } else if (code === GAME_DATA.cheatShowEnemies) {
+  } else if (code === GAME_DATA.cheatList.cheatShowEnemies) {
 
-  } if (code === GAME_DATA.cheatShowEnemies) {
+  } if (code === GAME_DATA.cheatList.cheatShowEnemies) {
 
   } else {
     Modal.show("Invalid Code")

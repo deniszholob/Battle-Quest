@@ -17,6 +17,11 @@
   border: 2px solid green;
 }
 
+.action.disabled:hover,
+.action:disabled:hover {
+  border: none;
+}
+
 .action-block {
   background-image: url(../images/actions/action-block.jpg);
 }

@@ -122,7 +122,18 @@ nav ul li a {
   background-color: transparent;
   position: absolute;
   width: 100%;
-  height: 100%;;
+  height: 100%;
+}
+
+.progress-bar > span.bar-change {
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  justify-content: right;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 4px;
+  /* animation: changeAnimation 4s; */
 }
 
 .progress-bar span.green {
@@ -139,6 +150,26 @@ nav ul li a {
 
 .progress-bar span.yellow {
   background-color: darkorange;
+}
+
+.progress-bar > span.bar-change.text-green {
+  color: green;
+  background-color: whitesmoke;
+}
+
+.progress-bar > span.bar-change.text-red {
+  color: darkred;
+  background-color: whitesmoke;
+}
+
+@keyframes changeAnimation {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 
