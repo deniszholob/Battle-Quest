@@ -39,6 +39,12 @@ export class GameLogic {
         Renderer.clearElement(ELEMENTS.elCharacterSheet);
         Renderer.renderCharacterSheet(ELEMENTS.elCharacterSheet, this.character.characterData);
     }
+    static resetEnemies() {
+        ENEMIES_AVAILABLE.forEach(element => {
+            element.visible = false;
+        });
+        ENEMIES_AVAILABLE[0].visible = true;
+    }
     static showBattleScreen(enemy) {
         this.hideAllSections();
         Renderer.clearElement(ELEMENTS.elScreenBattle);
@@ -63,6 +69,7 @@ export class GameLogic {
     }
     static chooseCharacter(characterData) {
         this.character = this.getNewEntity(characterData);
+        this.resetEnemies();
         this.showMapScreen();
     }
     // TODO: Fix type issues
