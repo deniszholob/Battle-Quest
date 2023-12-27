@@ -144,7 +144,7 @@ export class Renderer {
     elActionBar.appendChild(elText);
 
     const elButtonMagic = document.createElement("button");
-    elButtonMagic.classList.add("button", "full-width", "margin-center");
+    elButtonMagic.classList.add("button", "full-width");
     elButtonMagic.textContent = "Upgrade Magic";
     elButtonMagic.onclick = () => {
       GameLogic.upgradeCharacter({
@@ -158,7 +158,7 @@ export class Renderer {
     elActionBar.appendChild(elButtonMagic);
 
     const elButtonStrength = document.createElement("button");
-    elButtonStrength.classList.add("button", "full-width", "margin-center");
+    elButtonStrength.classList.add("button", "full-width");
     elButtonStrength.textContent = "Upgrade Strength";
     elButtonStrength.onclick = () => {
       GameLogic.upgradeCharacter({
@@ -172,7 +172,7 @@ export class Renderer {
     elActionBar.appendChild(elButtonStrength);
 
     const elButtonDefence = document.createElement("button");
-    elButtonDefence.classList.add("button", "full-width", "margin-center");
+    elButtonDefence.classList.add("button", "full-width");
     elButtonDefence.textContent = "Upgrade Defence";
     elButtonDefence.onclick = () => {
       GameLogic.upgradeCharacter({

@@ -18,19 +18,19 @@ export const GAME_DATA = {
             id: "char-mage",
             name: "Wizard",
             stats: {
-                magic: 4,
+                magic: 3,
                 strength: 1,
                 defence: 2,
-            }
+            },
         },
         characterWarrior: {
             id: "char-warrior",
             name: "Warrior",
             stats: {
                 magic: 1,
-                strength: 4,
+                strength: 3,
                 defence: 2,
-            }
+            },
         },
         characterGuardian: {
             id: "char-guardian",
@@ -38,8 +38,8 @@ export const GAME_DATA = {
             stats: {
                 magic: 1,
                 strength: 2,
-                defence: 4,
-            }
+                defence: 3,
+            },
         },
     },
     enemyList: {
@@ -48,7 +48,7 @@ export const GAME_DATA = {
             name: "Forest Creature",
             stats: {
                 magic: 0,
-                strength: 3,
+                strength: 2,
                 defence: 2,
             },
             xp: 1,
@@ -102,9 +102,9 @@ export const GAME_DATA = {
             id: "enemy-sephiroth",
             name: "Sephiroth",
             stats: {
-                magic: 1,
-                strength: 2,
-                defence: 3,
+                magic: 300,
+                strength: 350,
+                defence: 300,
             },
             xp: 20,
             visible: false,
@@ -129,5 +129,5 @@ export const GAME_DATA = {
             strength: 350,
             defence: 300,
         },
-    }
+    },
 };

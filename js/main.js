@@ -18,14 +18,21 @@ function enterCheatCode(form) {
     parseCheatCode(cheatCode);
 }
 function parseCheatCode(code) {
+    console.log(code, GAME_DATA.cheatList.cheatShowEnemies, code === GAME_DATA.cheatList.cheatShowEnemies);
     if (code === GAME_DATA.cheatList.cheatShowEnemies) {
+        Modal.show("Map revealed!");
+        GameLogic.revealMap();
     }
-    else if (code === GAME_DATA.cheatList.cheatShowEnemies) {
+    else if (code === GAME_DATA.cheatList.cheatBoostCharacter) {
+        Modal.show("Character stats boosted!");
+        GameLogic.setCharacterStats(GAME_DATA.cheatList.cheatBoostCharacterStats);
     }
-    if (code === GAME_DATA.cheatList.cheatShowEnemies) {
+    else if (code === GAME_DATA.cheatList.cheatBonusBoss) {
+        Modal.show("Not yet implemented");
+        // Modal.show("Bonus Boss unveiled!")
     }
     else {
-        Modal.show("Invalid Code");
+        Modal.show(`Invalid Code: ${code}`);
     }
 }
 // Run script

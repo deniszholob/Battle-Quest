@@ -109,29 +109,29 @@ export class GameLogic {
         // Magic
         if (actionChar == GAME_DATA.actionList.magic && actionEnemy == GAME_DATA.actionList.magic) {
             console.log("magic - magic");
-            this.character.hp -= this.enemy.characterData.stats.magic / 2;
+            this.character.hp -= this.enemy.characterData.stats.magic; // / 2;
             this.character.mp -= 1;
-            this.enemy.hp -= this.character.characterData.stats.magic / 2;
+            this.enemy.hp -= this.character.characterData.stats.magic; // / 2;
             this.enemy.mp -= 1;
         }
         else if (actionChar == GAME_DATA.actionList.magic && actionEnemy == GAME_DATA.actionList.melee) {
             console.log("magic - melee");
             this.character.hp -= this.enemy.characterData.stats.strength;
             this.character.mp -= 1;
-            this.enemy.hp -= this.character.characterData.stats.magic / 2;
+            this.enemy.hp -= this.character.characterData.stats.magic; // / 2;
             this.enemy.mp += 1;
         }
         else if (actionChar == GAME_DATA.actionList.magic && actionEnemy == GAME_DATA.actionList.block) {
             console.log("magic - block");
             // this.character.hp -= this.enemy.characterData.stats.magic;
             this.character.mp -= 1;
-            this.enemy.hp -= this.character.characterData.stats.magic / 4;
+            this.enemy.hp -= this.character.characterData.stats.magic / 2; // / 4;
             this.enemy.mp += 2;
         }
         // === Melee
         else if (actionChar == GAME_DATA.actionList.melee && actionEnemy == GAME_DATA.actionList.magic) {
             console.log("melee - magic");
-            this.character.hp -= this.enemy.characterData.stats.magic / 2;
+            this.character.hp -= this.enemy.characterData.stats.magic; // / 2;
             this.character.mp += 1;
             this.enemy.hp -= this.character.characterData.stats.strength;
             this.enemy.mp -= 1;
@@ -153,7 +153,7 @@ export class GameLogic {
         // === Block
         else if (actionChar == GAME_DATA.actionList.block && actionEnemy == GAME_DATA.actionList.magic) {
             console.log("block - magic");
-            this.character.hp -= this.enemy.characterData.stats.magic / 4;
+            this.character.hp -= this.enemy.characterData.stats.magic / 2; // / 4;
             this.character.mp += 2;
             // this.enemy.hp -= this.character.characterData.stats.strength;
             this.enemy.mp -= 1;
@@ -206,12 +206,12 @@ export class GameLogic {
                 disabled: this.character.mp <= 0,
             },
             {
-                actionType: GAME_DATA.actionList.melee,
-                disabled: this.character.sp <= 0,
-            },
-            {
                 actionType: GAME_DATA.actionList.block,
                 disabled: false,
+            },
+            {
+                actionType: GAME_DATA.actionList.melee,
+                disabled: this.character.sp <= 0,
             },
         ];
     }
@@ -246,5 +246,17 @@ export class GameLogic {
             ENEMIES_AVAILABLE[4].visible = true;
         // else if (defeatedEnemy.id.endsWith("dragon"))
         //   ENEMIES_AVAILABLE[5].visible = true
+    }
+    static revealMap() {
+        ENEMIES_AVAILABLE.forEach(e => e.visible = true);
+        this.showMapScreen();
+    }
+    static setCharacterStats(stats) {
+        this.character = this.getNewEntity({
+            id: this.character.characterData.id,
+            name: this.character.characterData.name,
+            stats
+        });
+        this.showMapScreen();
     }
 }
